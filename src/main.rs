@@ -1,3 +1,4 @@
+use rayon::join;
 use std::fs::File;
 use std::io;
 use std::io::BufRead;
@@ -105,8 +106,8 @@ fn main() {
         .expect("Failed to read line");
 
     match choice.trim() {
-        "1" => run_tests("C:\\Users\\yosif\\projects\\rust\\calculate_distance\\calculate_distance\\tests\\sample.txt"),
-        "2" => run_tests("C:\\Users\\yosif\\projects\\rust\\calculate_distance\\calculate_distance\\tests\\complete.txt"),
+        "1" => run_tests("C:\\Users\\user\\Desktop\\Home\\Study\\University\\GP\\Rust\\Detecting-Plagiarism-within-Documents-in-Rust\\tests\\Sample.txt"),
+        "2" => run_tests("C:\\Users\\user\\Desktop\\Home\\Study\\University\\GP\\Rust\\Detecting-Plagiarism-within-Documents-in-Rust\\tests\\complete.txt"),
         _ => println!("Invalid choice!"),
     }
 }
